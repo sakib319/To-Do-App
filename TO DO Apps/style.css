@@ -1,0 +1,121 @@
+body {
+    font-size: 15pt;
+}
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-style: sans-serif;
+  
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+background: linear-gradient(135deg,indigo,purple,hotpink);
+
+  padding: 10px;
+}
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 20px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h1{
+  color: darkblue;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h1 img{
+ 
+  width: 60px;
+  margin-left: 10px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: centre;
+  padding-left: 20px;
+  margin: 5px 25px;
+  background: wheat;
+  border-radius: 30px;
+  
+}
+.row input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 15px;
+}
+.row button{
+border: none;
+outline: none;  
+padding: 16px 50px;
+background: red;
+color: white;
+cursor: pointer;
+font-size: 22px;
+border-radius: 40px;
+}
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 20px 8px 12px 50px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  position: relative;
+ 
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-image: url("/images/unchecked.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 8px;
+}
+.checked{
+  text-decoration:line-through;
+}
+.checked::before{
+content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-image: url("/images/checked.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 10px;
+  left: 8px;
+}
+
+ul li span{
+  
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  
+ text-align: center;
+ 
+}
+ul li span:hover{
+  background: lightgrey;
+}
